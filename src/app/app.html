@@ -1,9 +1,90 @@
- <ion-menu [content]= 'content' >
 
-  <ion-content padding>
+  <ion-menu id="ArticleMenu" persistent="true"  [content]="content">
+  <ion-scroll scrollY="true">
 
-    <h2>Logout</h2>
+  <ion-card class="background-image-card" *ngFor="let article of articleMenuArray; let i = index" (click)="articleMenuChange(i)">
+    <div class="card-image background-image-card__image-wrapper" [innerHTML]="article.post_image"></div>
+
+      <div class="background-image-card__titles">
+
+        <h2 class="card-title background-image-card__title">{{article.post_title}}</h2>
+
+        <h3 class="card-subtitle  background-image-card__subtitle" [innerHTML]="utils.dateFromString(article.post_date)"></h3>
+
+      </div>
+
+  </ion-card>
+
+  </ion-scroll>
+
+  <ion-content>
+    <ion-card class="profile__card">
+      <!-- <img class="profile__img" src="//ionicframework.com/img/docs/spengler.jpg"> -->
+      <div class="my-image">{{firstChar}}</div>
+  <ion-card-content>
+    <ion-card-title>
+      {{currentUser.firstName}} {{currentUser.lastName}}
+      <p>{{currentUser.email}}</p>
+      </ion-card-title>
+  </ion-card-content>
+</ion-card>
+<ion-list no-border>
+
+<!-- <ion-list-header>
+  Classes
+</ion-list-header> -->
+
+<ion-item>
+  <ion-icon  md="md-person" item-start></ion-icon>
+  Profile
+</ion-item>
+
+<ion-item>
+  <ion-icon name="folder" item-start></ion-icon>
+  My Pack
+</ion-item>
+
+
+<!--</ion-list>
+<ion-list>
+
+<ion-list-header>
+  All labels
+</ion-list-header> -->
+
+<ion-item>
+  <ion-icon name='flash' item-start></ion-icon>
+  Subscribe
+</ion-item>
+
+<ion-item menuClose (click)="reminder()">
+  <ion-icon name="alarm" item-start></ion-icon>
+  Reminder
+</ion-item>
+
+<ion-item menuClose (click)="logout()">
+  <ion-icon name="log-out" item-start></ion-icon>
+  Logout
+</ion-item>
+<ion-item>
+  <ion-icon  md="md-text" item-start></ion-icon>
+  Feedback
+</ion-item>
+
+</ion-list>
+
+
+    <!-- <ion-list> -->
+      <!-- <h4>Logout</h4> -->
+
+    <!-- <button menuClose ion-item *ngFor = "let p of pages" (click) = "openPage(p)">
+        {{p.title}}
+    </button> -->
+       <!-- <button class="home__btnfb" padding ion-button icon-right (click)="logout()">
+    logout
+  </button> -->
+    <!-- </ion-list> -->
 
   </ion-content>
-  </ion-menu> 
-<ion-nav [root]="rootPage" #content></ion-nav>
+  </ion-menu>
+<ion-nav [root]="rootPage"  swipeBackEnabled="false" #content></ion-nav>

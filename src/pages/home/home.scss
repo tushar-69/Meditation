@@ -1,15 +1,112 @@
 page-home {
 
 .bg-image{
-	background-image: url('../assets/imgs/back.png');
+	//background-image: url('../assets/imgs/back.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	background-color:#09182f;
+	.item-inner{
+		border-bottom: none !important;
+		box-shadow: none !important;
+
+	}
 }
 
+#roundedTxtBx {
+		width: 100%;
+		height: 100px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 10px;
+		margin-bottom: 10px;
+		background-color: #09182f;
+		border-color: #33ee3e;
+}
 
+// ion-item:first-child {
+//     border-top-left-radius: 5px;
+//     border-top-right-radius: 5px;
+//   }
+//   ion-item:last-child {
+//     border-bottom-left-radius: 5px;
+//     border-bottom-right-radius: 5px;
+//   }
+//   ion-item.item {
+//     background-color: #09182f;
+//     margin-bottom: 10px;
+//     .label {
+//       width: 10%;
+//       color: rgba(0, 0, 0, 0.6);
+//       font-size: 1.2em;
+//     }
+//   }
 
 }
 .error-message{
 	color:red
+}
+.home{
+	&__btnfb{
+	background-color:#3B5998;
+	border-radius: 20px;
+	width:100%;
+	text-transform: capitalize;
+	margin-top: 10px;
+	&:hover{
+	background-color:#3B5998;
+
+	}
+	}
+
+	&__password{
+	font-size:32px;
+	background:transparent;
+	margin-top: 35px !important;
+
+
+	&:hover{
+		background:transparent;
+
+	}
+	}
+	&__sign-up{
+		margin-top: 10px;
+	text-transform: capitalize;
+	&_label{
+	//margin-left: 15px;
+	font-size:12px;
+	color:darkgray;
+	}
+	&_sign-up{
+	font-size:12px;
+	color:#ff3334;
+	}
+	}
+	&__custome-input{
+		    border-radius: 20px;
+				background-color:#041e41;
+				padding-left: 12px;
+				color: white;
+	}
+	&__custome-label{
+		color: #132f57 !important;
+		padding-left: 14px;
+	}
+	&__eye-icon{
+		position: absolute;
+		bottom:0;
+    right: 16px;
+		bottom: -6px;
+	}
+	&__item-list{
+		padding-right: 8px;
+		padding-left: 16px;
+	}
+	&__forgot-pwd{
+		margin-top: 12px;
+		//margin-left: 15px;
+		color: white;
+		font-size: 13px;
+	}
 }

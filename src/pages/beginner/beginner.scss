@@ -1,0 +1,32 @@
+.grd {
+  &_hd {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  &_day {
+    margin-top: 15px;
+    font-size: 35px;
+    text-align: center;
+  }
+  &_btn {
+    margin-top: 100px;
+    font-size: 60px;
+    color: #09182f;
+  }
+  &_drp {
+    align-self: center;
+    margin-top: 60px;
+    width: 150px;
+    border-radius: 105px;
+    background-color: #3399ff;
+    &_slct {
+      color: white;
+      margin: 0 auto;
+padding:0;
+max-width: 100%;
+
+      //font-size: 20px;
+      //font-weight: bold;
+    }
+  }
+}

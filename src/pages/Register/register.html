@@ -1,94 +1,104 @@
 <ion-header style="color: white; background-color: red">
-  <ion-navbar  color = "primary">
-    <ion-title >
-      Meditation
+  <ion-navbar  color = "primary" hideBackButton>
+    <ion-title padding-left >
+      Create An Account
     </ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content  class="bg-image">
+<ion-content padding class="bg-image">
 
  <form  [formGroup] = "registerFormData" (ngSubmit)="SignUp()">
-	<ion-list >
+	<ion-list>
 
-  <ion-item  padding class="bg-image" style="box-shadow: none; background : none; color: white;">
-    <ion-label floating>Enter Your First Name</ion-label>
-    <ion-input type="text" formControlName="firstname"></ion-input>
+  <ion-item  class="bg-image">
+    <ion-label class = "register__custome-label" floating>First Name</ion-label>
+    <ion-input class = "register__custome-input" type="text" formControlName="firstName"></ion-input>
   </ion-item>
-  <div class="error-message" padding *ngIf="firstname.errors  && ( isFormSubmitted || firstname.dirty || firstname.touched)" [ngClass] = "'error'"> 
-      <div *ngIf="firstname.errors.required">
+ <!--  <div class="error-message" padding *ngIf="firstname.errors  && ( isFormSubmitted || firstname.dirty || firstname.touched)" [ngClass] = "'error'">
+      <div *ngIf="fiheaderrstname.errors.required">
         First Name required.
-      </div>  
+      </div>
       <div  *ngIf="firstname.errors.pattern">
         Enter valid First Name.
-      </div> 
-    </div>
+      </div>
+    </div> -->
 
 
-  <ion-item  padding class="bg-image" style="box-shadow: none; background : none; color: white;">
-    <ion-label floating>Enter Your Last Name</ion-label>
-    <ion-input type="text" formControlName="lastName"></ion-input>
+  <ion-item  class="bg-image">
+    <ion-label class = "register__custome-label" floating>Last Name</ion-label>
+    <ion-input class = "register__custome-input" type="text" formControlName="lastName"></ion-input>
   </ion-item>
 
-  <div class="error-message" padding *ngIf="lastName.errors  && ( isFormSubmitted || lastName.dirty || lastName.touched)" [ngClass] = "'error'"> 
+ <!--  <div class="error-message" padding *ngIf="lastName.errors  && ( isFormSubmitted || lastName.dirty || lastName.touched)" [ngClass] = "'error'">
       <div *ngIf="lastName.errors.required">
         Last Name required.
-      </div>  
+      </div>
       <div  *ngIf="lastName.errors.pattern">
         Enter valid Last Name.
-      </div> 
-    </div>
+      </div>
+    </div> -->
 
-   <ion-item  padding class="bg-image" style="box-shadow: none; background : none; color: white;">
-    <ion-label floating>Enter Country</ion-label>
-    <ion-input type="text" formControlName="country"></ion-input>
-  </ion-item>
-  <div class="error-message" padding *ngIf="country.errors  && ( isFormSubmitted || country.dirty || country.touched)" [ngClass] = "'error'"> 
+
+ <!--  <div class="error-message" padding *ngIf="country.errors  && ( isFormSubmitted || country.dirty || country.touched)" [ngClass] = "'error'">
       <div *ngIf="country.errors.required">
         Country required.
-      </div>  
+      </div>
       <div  *ngIf="country.errors.pattern">
         Enter valid Country Name.
-      </div> 
-    </div>
+      </div>
+    </div> -->
 
-   <ion-item  padding class="bg-image" style="box-shadow: none; background : none; color: white;">
-    <ion-label floating>Enter EmailId</ion-label>
-    <ion-input type="EmailId" formControlName="emailId"></ion-input>
+   <ion-item   class="bg-image">
+    <ion-label class = "register__custome-label" floating>Email</ion-label>
+    <ion-input class = "register__custome-input" type="email" formControlName="email"></ion-input>
   </ion-item>
-  <div class="error-message" padding *ngIf="emailId.errors  && ( isFormSubmitted || emailId.dirty || emailId.touched)" [ngClass] = "'error'"> 
+ <!--  <div class="error-message" padding *ngIf="emailId.errors  && ( isFormSubmitted || emailId.dirty || emailId.touched)" [ngClass] = "'error'">
       <div *ngIf="emailId.errors.required">
         Email ID required.
-      </div>  
+      </div>
       <div  *ngIf="emailId.errors.pattern ">
         Enter valid EmailId.
-      </div> 
-    </div>
+      </div>
+    </div> -->
 
-   <ion-item padding class="bg-image" style="box-shadow: none; background: none; border-bottom-color: white; color: white;">
-       <ion-label floating>Password</ion-label>
-       <ion-input type="{{type}}" formControlName="password"></ion-input>
-       <button *ngIf="!showPass" ion-button clear color="light" type="button" item-end (click)="showPassword()" style="height:32px;">     
+   <ion-item  class="bg-image">
+       <ion-label class = "register__custome-label" floating>Password</ion-label>
+       <ion-input class = "register__custome-input" type="{{type}}" formControlName="password"></ion-input>
+       <!-- <button class="register__password" *ngIf="!showPass" ion-button clear color="light" type="button" item-end (click)="showPassword()" style="height:32px;">
         <ion-icon name="eye" style="font-size:32px;"></ion-icon>
       </button>
-      <button *ngIf="showPass" ion-button clear color="light" type="button" item-end (click)="showPassword()" style="height:32px;">  
-        <ion-icon name="eye" style="font-size:32px;"></ion-icon>
-      </button>
+      <button class="register__password" *ngIf="showPass" ion-button clear color="light" type="button" item-end (click)="showPassword()" style="height:32px;">
+        <ion-icon class = "register__custome-label" name="eye-off" style="font-size:32px;"></ion-icon>
+      </button> -->
+      <ion-icon  class="register__eye-icon" item-content *ngIf="!showPass"  item-right name="eye" style="font-size:32px;" (click)="showPassword()"></ion-icon>
+      <ion-icon class="register__eye-icon" item-content *ngIf="showPass" item-right name="eye-off" style="font-size:32px;" (click)="showPassword()"></ion-icon>
     </ion-item>
 
-  <ion-item  padding class="bg-image" style=" background : none; border-bottom-color: white; color: white;">
-    <ion-label floating>Enter Mobile Number</ion-label>
-    <ion-input type="text" formControlName="mobileNumber"></ion-input>
+   <!-- <ion-item  class="bg-image" style="box-shadow: none; background : none; color: white;">
+    <ion-label floating>Country</ion-label>
+    <ion-input type="text" formControlName="country"></ion-input>
   </ion-item>
-  <div class="error-message" padding *ngIf="mobileNumber.errors  && ( isFormSubmitted || mobileNumber.dirty || mobileNumber.touched)" [ngClass] = "'error'">   
+
+  <ion-item   class="bg-image" style=" background : none; border-bottom-color: white; color: white;">
+    <ion-label floating>Mobile Number</ion-label>
+    <ion-input type="tel" formControlName="mobileNumber"></ion-input>
+  </ion-item> -->
+ <!--  <div class="error-message" padding *ngIf="mobileNumber.errors  && ( isFormSubmitted || mobileNumber.dirty || mobileNumber.touched)" [ngClass] = "'error'">
       <div  *ngIf="mobileNumber.errors.pattern ">
         Enter valid Mobile Number.
-      </div> 
-    </div>
+      </div>
+    </div> -->
+        <ion-item style="display:none;"></ion-item>
 
 </ion-list>
-<div padding>
-  <button text-center style="text-decoration: underline;  margin-top: 10px; color: white; background-color: #ff1919; border-radius: 20px;" block ion-button type="submit">Sign Up</button>
+
+<div class="register__item-list">
+  <button text-center style="margin-top: 10px; color: white; background-color:#ff3334; border-radius: 20px;" block ion-button type="submit">Sign Up</button>
+</div>
+
+<div class="register__sign-up" style="margin-top: 10px;">
+<span class="register__sign-up_label"> Already have an account ?</span>
+<span class="register__sign-up_sign-up" (click)="Login();"> Login </span>
 </div>
 </form>
 

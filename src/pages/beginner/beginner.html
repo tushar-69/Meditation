@@ -1,0 +1,25 @@
+<ion-header style="color: white; background-color: red">
+  <ion-navbar  color = "primary">
+    <ion-title>
+      Basics
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="grd" >
+
+    <ion-row class="grd_day" >
+      <ion-col align="text-center">Day 1</ion-col>
+    </ion-row>
+    <ion-icon class="grd_btn" name="play" align="center"></ion-icon>
+    <ion-item align="center" class="grd_drp">
+       <ion-label style="display: none;">Select Duration</ion-label>
+      <ion-select title="Select Duratuin" [(ngModel)]="Time" class="grd_drp_slct">
+        <ion-option value="3" selected>3 min</ion-option>
+        <ion-option value="5">5 min</ion-option>
+        <ion-option value="10">10 min</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-grid>
+</ion-content>

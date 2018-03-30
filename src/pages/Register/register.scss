@@ -1,9 +1,71 @@
 page-register {
+	.bg-image{
+		background-color:#09182f;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}.item-inner{
+		border-bottom: none !important;
+		box-shadow: none !important;
+	}
+}
+.error-message{
+	color:red
+}
+.register{
+	&__btnfb{
+	background-color:#3B5998;
+	border-radius:20px;
+	width:100%;
+	text-transform: capitalize;
+	margin-top: 10px;
 
-.bg-image{
-	background-image: url('../assets/imgs/back.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	&:hover{
+	background-color:#3B5998;
+
+	}
+	}
+
+	&__password{
+	font-size:32px;
+	background:transparent;
+	margin-top: 35px !important;
+
+	&:hover{
+		background:transparent;
+
+	}
+	}
+	&__sign-up{
+	text-transform: capitalize;
+	&_label{
+	margin-left: 15px;
+	font-size:12px;
+	color:darkgray;
+	}
+	&_sign-up{
+	font-size:12px;
+	color:#ff3334;
+	}
+	}
+	&__custome-input{
+		    border-radius: 20px;
+				background-color:#041e41;
+				padding-left: 12px;
+				color: white;
+	}
+	&__custome-label{
+		color: #132f57 !important;
+		padding-left: 14px;
+	}
+	&__eye-icon{
+		position: absolute;
+		bottom:0;
+    right: 16px;
+		bottom: -6px;
+	}
+	&__item-list{
+		padding-right: 8px;
+		padding-left: 16px;
 	}
 }

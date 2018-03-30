@@ -1,9 +1,147 @@
 page-mainpage {
-
+	// .scroll-content{
+	//     background: url("../assets/imgs/background.svg") no-repeat center center fixed;
+	//     -webkit-background-size: cover;
+	//     -moz-background-size: cover;
+	//     background-size: cover;
+	//
+	// }
 .bg-image{
-	background-image: url('../assets/imgs/meditate.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-color:#09182f;
+
 	}
+	.content-padding{
+		margin:16px;
+	}
+	.inner{
+	//	width:2000px;
+	//	height:100%;
+		&_progress-outer {
+				//	margin: 5px;
+				 position: relative;
+				 height: 6px;
+				 display: block;
+				 width: 100%;
+				 //background-color: map-get(white, primary);
+				 background-color: white;
+				 border-radius: 2px;
+				 margin: 0.5rem 0 1rem 0;
+				 overflow: hidden;
+				 max: 100%;
+		 }
+		 &_progress-inner {
+				// min-width: 15%;
+
+				 white-space: nowrap;
+				 overflow: hidden;
+				 padding: 5px;
+				// border-radius: 10px;
+					background-color: green;
+				 //background-color:  lighten( map-get(green, airlabtechcolor), 35% );
+		}
+		&_hd {
+			margin-top: 30px;
+			width:150px;
+			height: 70px;
+			font-size: 20px;
+			font-weight: lighter;
+			font-family: monospace;
+		}
+		&_cnt {
+			//margin-top: 50px;
+			height: 100px;
+			font-size: 18px;
+			font-family: monospace;
+		}
+		&_pb {
+			border-radius: 10px;
+		}
+	}
+	.grd {
+		&_wc {
+			font-size: 22px;
+			font-family: monospace;
+			font-weight: bolder;
+			color: #1858cd;
+			visibility: hidden;
+			border-bottom: 1px solid darkgray;
+		}
+		&_pmt {
+			font-size: 20px;
+			font-family: serif;
+			font-variant: small-caps;
+			font-weight: bold;
+			color: #09182f;
+			border-bottom: 1px solid darkgray;
+		}
+		&_tht {
+			font-size: 15px;
+			font-family: serif;
+			font-weight: lighter;
+			font-style: italic;
+			color: darkgray;
+			border-bottom: 1px solid darkgray;
+		}
+		&_bgn {
+			height: 120px;
+			border-bottom: 1px solid darkgray;
+			&_day {
+				font-size: 17px;
+				font-family: monospace;
+			}
+			&_bsc {
+				font-size: 30px;
+				font-family: monospace;
+			}
+			&_chp {
+				width: 135px;
+				height: 40px;
+				margin-top: 10px;
+				&_lbl {
+					font-size: 25px;
+				}
+				&_icn {
+					//font-size: 50px;
+				}
+			}
+		}
+	}
+
+	ion-card{
+		display: table-cell;
+		border-right: solid 10px transparent;
+		box-shadow: none !important;
+
+		button{
+			background: url('../assets/imgs/image.svg') !important;
+			    width: 172px;
+					height: 100% !important;
+		}
+	}
+	// ion-icon {
+	// 	font-size: 40px;
+	// 	color: red;
+	// }
+	// .grdB {
+	// 	&_hd {
+	// 		margin-top: 20px;
+	// 		font-size: 15px;
+	// 	}
+	// 	&_day {
+	// 		margin-top: 15px;
+	// 		font-size: 35px;
+	// 		text-align: center;
+	// 	}
+	// 	&_btn {
+	// 		margin-top: 100px;
+	// 		font-size: 60px;
+	// 		color: #09182f;
+	//
+	// 	}
+	// 	&_drp {
+	// 		margin-top: 60px;
+	// 		width: 150px;
+	// 	}
+	// }
+
 }

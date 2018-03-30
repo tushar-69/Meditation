@@ -1,9 +1,26 @@
 page-forget{
-	
+
 	.bg-image{
-	background-image: url('../assets/imgs/back.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+		//background-image: url('../assets/imgs/back.png');
+	  background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-color:#09182f;
+	}.item-inner{
+		border-bottom: none !important;
+		box-shadow: none !important;
+
 	}
+.forget{
+		&__custome-input{
+				border-radius: 20px;
+				background-color:#041e41;
+				padding-left: 12px;
+				color: white;
+	}
+	&__custome-label{
+		color: #132f57 !important;
+		padding-left: 14px;
+	}
+}
 }

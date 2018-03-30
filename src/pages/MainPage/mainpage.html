@@ -1,17 +1,76 @@
-
-<ion-header style="color: white; background-color: red">
-  <ion-navbar  color = "primary">
-    <ion-buttons>
-      <button ion-button icon-only  menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title>
-      Meditation 
-    </ion-title>
-  </ion-navbar>
+<ion-header>
+    <ion-navbar hideBackButton="true">
+               <button ion-button menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+            <ion-title>
+                Meditation
+            </ion-title>
+   </ion-navbar>
 </ion-header>
-<ion-content padding class="bg-image">
+ <ion-content padding>
 
-  
-  </ion-content>
+   <ion-grid class="grd">
+     <ion-row class="grd_wc">
+       <ion-col align="center" >
+         Welcome to Meditation
+       </ion-col>
+     </ion-row>
+     <div class="grd_bgn">
+       <ion-row class="grd_bgn_day">Day 1 of 10 </ion-row>
+       <ion-row align="left" class="grd_bgn_bsc">Basics</ion-row>
+      <ion-row>
+       <button ion-button round (click)="begin();" class="grd_bgn_chp">
+        <ion-icon class="grd_bgn_chp_icn" name="play"></ion-icon>
+        <ion-label>Begin</ion-label>
+      </button>
+     </ion-row>
+     </div>
+     <ion-row class="grd_pmt">
+       <ion-col >
+         <ion-label align="center">People Meditating Today </ion-label>
+         <ion-label style="font-size:45px;" align="center">46,352</ion-label>
+       </ion-col>
+     </ion-row>
+     <ion-row>
+       <ion-col class="grd_tht">
+      <div [innerHtml]="thought"></div>
+         <!-- “There are only two mistakes one can make along the road to truth; not going all the way, and not starting.” <br /> -->
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+
+   <ion-scroll scrollX="true" style="width:100%;height:280px;">
+     <div class="inner">
+       <ion-card *ngFor="let item of dates">
+         <button ion-button (click)="begin();">
+           <ion-card-content>
+            <div class="inner_hd"> Basic </div>
+            <div class="inner_cnt">1 of 10</div>
+            <!-- <progress class="inner_pb" max="100" value="10"> </progress> -->
+            <div class="inner_progress-outer">
+              <div class="inner_progress-inner" [style.width.%]="10"></div>
+            </div>
+          </ion-card-content>
+        </button>
+       </ion-card>
+     </div>
+   </ion-scroll>
+
+
+</ion-content>
+
+ <!-- <ion-content padding class="bg-image">
+  {{firstParam | json}}
+
+
+{{secondParam | json}}
+<img src = "{{url}}">
+
+   <div>
+          <button class="home__btnfb" padding ion-button icon-right (click)="logout()">
+      logout
+    </button>
+  </div>
+<!-- <ion-img width="80" height="80" src=""{{url}}""></ion-img>
+</ion-content> -->
